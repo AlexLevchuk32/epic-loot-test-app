@@ -107,6 +107,7 @@
 //==========================================================================================================================================================
 // Header main
 .header-main {
+	background-color: $color-white;
 	// .header-main__content
 	&__content {
 		display: flex;
@@ -521,5 +522,29 @@
 	&__text {
 		padding-top: 4px;
 		word-spacing: 4px;
+	}
+}
+
+.header-main {
+	// transition: 0.3s ease-in-out;
+}
+.header-main--fixed {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	z-index: 20;
+	animation: fade-in 0.3s ease-in-out;
+}
+
+@keyframes fade-in {
+	0% {
+		opacity: 0;
+		transform: translateY(-100%);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
 	}
 }
